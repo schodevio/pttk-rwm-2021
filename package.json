@@ -1,5 +1,5 @@
 {
-  "name": "mr_snowman",
+  "name": "threejs_starter",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "dat.gui": "^0.7.7",
+    "mitt": "^3.0.0",
+    "three": "^0.135.0",
     "vue": "^3.0.0"
   },
   "devDependencies": {

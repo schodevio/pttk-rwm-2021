@@ -1,4 +1,4 @@
-# mr_snowman
+# threejs_starter
 
 ## Project setup
 ```
