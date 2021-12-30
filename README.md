@@ -1,4 +1,4 @@
-# threejs_starter
+# PTTK RWM 2k21 Recap
 
 ## Project setup
 ```

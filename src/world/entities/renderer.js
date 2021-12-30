@@ -19,6 +19,8 @@ class Renderer {
   update() {
     this.entity.setSize(this.world.sizes.width, this.world.sizes.height)
     this.entity.setPixelRatio(this.world.sizes.pixelRatio)
+
+    this.entity.shadowMap.enabled = true
   }
 
   render() {

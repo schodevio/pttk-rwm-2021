@@ -22,6 +22,8 @@ class World {
 
     // Scene
     this.scene = new THREE.Scene()
+    this.scene.background = new THREE.Color(0xDAEFF9)
+    this.scene.fog = new THREE.FogExp2(0xcccccc, 0.0016)
 
     // Space
     this.space = new Space(this)

@@ -1,0 +1,25 @@
+.content {
+  text-align: center;
+
+  .author {
+    margin-bottom: 1em;
+  }
+
+  h4 {
+    margin-bottom: 0.25em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
+    transition: 0.25s;
+
+    &:hover {
+      color: #FFB521;
+    }
+  }
+}

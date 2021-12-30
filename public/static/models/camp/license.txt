@@ -1,0 +1,11 @@
+Model Information:
+* title:	Low Poly 3d Game Scene
+* source:	https://sketchfab.com/3d-models/low-poly-3d-game-scene-d4d357a35ca54aab9a78b4718c809600
+* author:	pariniojha (https://sketchfab.com/pariniojha)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Low Poly 3d Game Scene" (https://sketchfab.com/3d-models/low-poly-3d-game-scene-d4d357a35ca54aab9a78b4718c809600) by pariniojha (https://sketchfab.com/pariniojha) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
