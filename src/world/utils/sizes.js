@@ -2,7 +2,7 @@ import emitter from '@/world/utils/emitter'
 
 class Sizes {
   constructor() {
-    window.addEventListener('resize', () => this.emit('update'))
+    window.addEventListener('resize', () => this.emit('resize'))
   }
 
   get aspectRatio() {
