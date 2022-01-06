@@ -1,5 +1,5 @@
 # PTTK RWM 2021 [![MIT license](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/schodevio/pttk-rwm-2021/blob/main/LICENSE.md) [![Netlify Status](https://api.netlify.com/api/v1/badges/765b6eae-e179-4e6f-ae93-ace1477a0384/deploy-status)](https://app.netlify.com/sites/pttk-rwm-2021/deploys)
-A smart & ingenious summary of trips organized by PTTK RWM in 2021 made with Three.js & Vue 3.0
+A pretty & ingenious 3D summary of trips organized by PTTK RWM in 2021 made with Three.js & Vue 3.0
 
 <a href="https://pttk-rwm-2021.netlify.app/" target="_blank">See demo</a>
 
