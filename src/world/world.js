@@ -1,6 +1,7 @@
 import * as THREE from 'three'
 
 import Debug from '@/world/utils/debug'
+import Loader from '@/world/utils/loader'
 import Sizes from '@/world/utils/sizes'
 import Time from '@/world/utils/time'
 
@@ -11,6 +12,9 @@ import Space from '@/world/entities/space'
 class World {
   constructor(options) {
     this.canvas = options.canvas
+
+    // Loader
+    this.loader = new Loader()
 
     // Sizes
     this.sizes = new Sizes()

@@ -1,5 +1,7 @@
 import * as THREE from 'three'
 
+import Overlay from '@/world/entities/overlay'
+
 import Camp from '@/world/entities/camp'
 import Logo from '@/world/entities/logo'
 import Stat from '@/world/entities/stat'
@@ -15,6 +17,7 @@ class Space {
     // Objects
     this.setup()
 
+    this.world.scene.add(this.overlay.entity)
     this.world.scene.add(this.group)
 
     // Debug
@@ -31,13 +34,26 @@ class Space {
     return this._sunLight
   }
 
+  get overlay() {
+    this._overlay ||= new Overlay({
+      loader: this.world.loader
+    })
+
+    return this._overlay
+  }
+
   get group() {
     this._group ||= new THREE.Group()
     return this._group
   }
 
   get camp() {
-    this._camp ||= new Camp({ name: 'camp' })
+    this._camp ||= new Camp({
+      name: 'camp',
+      loader: this.world.loader,
+      position: new THREE.Vector3(-60, 0, -52)
+    })
+
     return this._camp
   }
 
@@ -45,6 +61,7 @@ class Space {
     this._logo ||= new Logo({
       name: 'logo',
       image: 'logo.svg',
+      loader: this.world.loader,
       position: new THREE.Vector3(-5, 41, -102)
     })
 
@@ -55,6 +72,7 @@ class Space {
     this._tripsCount ||= new Stat({
       name: 'trips',
       image: 'trips_count.svg',
+      loader: this.world.loader,
       color: 0x1B62BF,
       position: new THREE.Vector3(2, 19, 46)
     })
@@ -66,6 +84,7 @@ class Space {
     this._peopleCount ||= new Stat({
       name: 'people',
       image: 'people_count.svg',
+      loader: this.world.loader,
       color: 0xF2620F,
       position: new THREE.Vector3(22, 19, 80)
     })
@@ -77,6 +96,7 @@ class Space {
     this._dogsCount ||= new Stat({
       name: 'dogs',
       image: 'dogs_count.svg',
+      loader: this.world.loader,
       color: 0x000000,
       position: new THREE.Vector3(64, 19, 84)
     })
@@ -88,6 +108,7 @@ class Space {
     this._carDistance ||= new Stat({
       name: 'car',
       image: 'car_distance.svg',
+      loader: this.world.loader,
       color: 0x5259D9,
       position: new THREE.Vector3(-18, 19, 66)
     })
@@ -99,6 +120,7 @@ class Space {
     this._kayakDistance ||= new Stat({
       name: 'kayak',
       image: 'kayak_distance.svg',
+      loader: this.world.loader,
       color: 0xF23838,
       position: new THREE.Vector3(-40, 19, 38)
     })
@@ -110,6 +132,7 @@ class Space {
     this._footDistance ||= new Stat({
       name: 'foot',
       image: 'foot_distance.svg',
+      loader: this.world.loader,
       color: 0x37A647,
       position: new THREE.Vector3(-60, 19, -2)
     })
@@ -121,6 +144,7 @@ class Space {
     this._peaksCount ||= new Stat({
       name: 'peaks',
       image: 'peaks_count.svg',
+      loader: this.world.loader,
       color: 0x666666,
       position: new THREE.Vector3(-80, 21, -52)
     })
@@ -182,11 +206,9 @@ class Space {
     })
   }
 
-  update() {
-  }
+  update() {}
 
   enableHelpers() {
-
     this.group.add(
       new THREE.DirectionalLightHelper(this.sunLight, 5),
       new THREE.CameraHelper(this.sunLight.shadow.camera),

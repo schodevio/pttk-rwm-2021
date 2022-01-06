@@ -22,8 +22,9 @@ class Logo {
   }
 
   setup() {
-    const svgLoader = new SVGLoader()
-    const { image, position } = this.options
+    const { image, loader, position } = this.options
+
+    const svgLoader = new SVGLoader(loader.manager)
 
     svgLoader.load(
       `static/images/${image}`,

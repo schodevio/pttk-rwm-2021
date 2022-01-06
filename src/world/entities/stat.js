@@ -18,12 +18,13 @@ class Stat {
   get material() {
     const { material, color = 0xFFB521, wireframe = false } = this.options
 
-    return material || new THREE.MeshLambertMaterial({ color, wireframe, side: THREE.DoubleSide })
+    return material || new THREE.MeshStandardMaterial({ color, wireframe, side: THREE.DoubleSide })
   }
 
   setup() {
-    const svgLoader = new SVGLoader()
-    const { image, position } = this.options
+    const { image, loader, position } = this.options
+
+    const svgLoader = new SVGLoader(loader.manager)
 
     svgLoader.load(
       `static/images/${image}`,

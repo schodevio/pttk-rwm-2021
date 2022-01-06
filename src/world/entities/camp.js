@@ -11,9 +11,10 @@ class Camp {
     this.setup()
   }
 
-
   setup() {
-    const gltfLoader = new GLTFLoader()
+    const { loader, position } = this.options
+
+    const gltfLoader = new GLTFLoader(loader.manager)
 
     gltfLoader.load(
       'static/models/camp/scene.gltf',
@@ -21,7 +22,7 @@ class Camp {
         this.entity = model.scene
 
         this.entity.scale.set(1000, 1000, 1000)
-        this.entity.position.set(-60, 0, -52)
+        this.entity.position.copy(position)
 
         this.entity.traverse(child => {
           if (child.isMesh) {
@@ -39,9 +40,7 @@ class Camp {
     )
   }
 
-  update() {
-
-  }
+  update() {}
 }
 
 Object.assign(Camp.prototype, emitter)
