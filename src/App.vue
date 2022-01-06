@@ -13,8 +13,20 @@
             <h4>Author</h4>
 
             <p>
-              Made with <em style="color: red;">&hearts;</em> by
+              Made with
+              <i class="fas fa-heart" style="color: crimson" />
+              by
               <a href="https://github.com/schodevio" target="_blank">schodevio</a>
+            </p>
+
+            <p>
+              <a href="https://github.com/schodevio" target="_blank" class="link link-icon">
+                <i class="fab fa-github" />
+              </a>
+
+              <a href="https://www.linkedin.com/in/szymonchodzidlo" target="_blank" class="link link-icon">
+                <i class="fab fa-linkedin" />
+              </a>
             </p>
           </div>
 
